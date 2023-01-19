@@ -1,6 +1,6 @@
 # TakeBreaks
 A simple python script that reminds you to take breaks after a certain amount of time spent active at your PC.  
-Made for Ubuntu using sanity to send notifications and gnome-screensaver to lock screen. However, it could probably be changed pretty easily for Windows.
+Made for Ubuntu using zenity to send notifications and gnome-screensaver to lock screen. However, it could probably be changed pretty easily for Windows.
 ## Install
 Dependencies:
 ```bash
