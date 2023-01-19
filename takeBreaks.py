@@ -1,12 +1,13 @@
+# Created by Jone Skaara in order to remember to take breaks from work.
 # Required Ubuntu dependencies:
 # sudo apt install gnome-screensaver
 # sudo apt install zenity
 # The screen locking is works with gnome.
 
 import datetime
+import time
 import os
 import subprocess
-import time
 
 # Parameters
 max_active_minutes = 30      # Time you can work before being reminded to take a break.
@@ -32,6 +33,8 @@ if lock_screen_warnings > 0:
     print("If you keep working past break time you be reminded every minute for " + str(lock_screen_warnings - 1) + " minutes before the screen will lock.")
     print("The screen will keep locking every minute until you take a " + str(min_break_duration) + " minute break")
 
+
+# Every minute, check for activity, increment active_minutes or break_minutes, then handle the change:
 while True:
     # Sleep a minute
     time.sleep(60)
